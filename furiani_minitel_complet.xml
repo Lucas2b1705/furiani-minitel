@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Service Minitel non officiel consacré à la mairie de Furiani.
+ Les informations doivent être vérifiées régulièrement sur mairie-furiani.corsica.
+-->
+<service>
+  <interpreteur url="http://www.minipavi.fr/XMLint/?xurl=" />
+  <debut nom="accueil" />
+
+  <page nom="accueil">
+    <ecran>
+      <efface />
+      <position ligne="1" col="1" />
+      <graphique />
+      <couleur texte="rouge" />
+      <repete caractere="X" nombre="40" />
+      <texte />
+      <position ligne="3" col="4" />
+      <doublehauteur />
+      <couleur texte="jaune" fond="bleu" />
+      <ecrit texte=" MAIRIE DE FURIANI " />
+      <taillenormale />
+      <position ligne="5" col="2" />
+      <couleur texte="blanc" />
+      <ecrit texte="Une commune ou il fait bon vivre" />
+      <position ligne="7" col="2" />
+      <couleur texte="cyan" />
+      <ecrit texte="SOMMAIRE" />
+      <position ligne="9" col="3" />
+      <couleur texte="jaune" />
+      <ecrit texte="1  Votre mairie" />
+      <position ligne="10" col="3" />
+      <ecrit texte="2  Etat civil / identite" />
+      <position ligne="11" col="3" />
+      <ecrit texte="3  Ecoles et jeunesse" />
+      <position ligne="12" col="3" />
+      <ecrit texte="4  Urbanisme" />
+      <position ligne="13" col="3" />
+      <ecrit texte="5  Vie municipale" />
+      <position ligne="14" col="3" />
+      <ecrit texte="6  Actualites" />
+      <position ligne="15" col="3" />
+      <ecrit texte="7  Contact et horaires" />
+      <position ligne="22" col="1" />
+      <couleur texte="magenta" />
+      <repete caractere="_" nombre="40" />
+      <position ligne="23" col="1" />
+      <couleur texte="blanc" fond="bleu" />
+      <ecrit texte="Votre choix : " />
+      <ecrit texte=" ENVOI " />
+      <effacefindeligne />
+    </ecran>
+    <entree>
+      <zonesaisie ligne="24" col="15" longueur="1" curseur="visible" />
+      <validation touche="envoi" />
+      <validation touche="repetition" />
+    </entree>
+    <action defaut="Choix incorrect">
+      <saisie choix="1" touche="envoi" suivant="mairie" />
+      <saisie choix="2" touche="envoi" suivant="etatcivil" />
+      <saisie choix="3" touche="envoi" suivant="ecoles" />
+      <saisie choix="4" touche="envoi" suivant="urbanisme" />
+      <saisie choix="5" touche="envoi" suivant="municipale" />
+      <saisie choix="6" touche="envoi" suivant="actualites" />
+      <saisie choix="7" touche="envoi" suivant="contact" />
+      <saisie touche="repetition" suivant="accueil" />
+    </action>
+  </page>
+
+  <page nom="mairie">
+    <ecran>
+      <efface />
+      <position ligne="1" col="1" />
+      <couleur texte="jaune" fond="bleu" />
+      <ecrit texte="VOTRE MAIRIE" />
+      <position ligne="4" col="1" />
+      <couleur texte="blanc" />
+      <ecrit texte="Centre administratif" />
+      <position ligne="6" col="1" />
+      <ecrit texte="Via di u cinque di maghju" />
+      <position ligne="7" col="1" />
+      <ecrit texte="20600 FURIANI" />
+      <position ligne="10" col="1" />
+      <ecrit texte="Telephone : 04 95 30 79 70" />
+      <position ligne="13" col="1" />
+      <couleur texte="cyan" />
+      <ecrit texte="Site officiel :" />
+      <position ligne="14" col="1" />
+      <couleur texte="blanc" />
+      <ecrit texte="mairie-furiani.corsica" />
+      <position ligne="18" col="1" />
+      <ecrit texte="Service Minitel non officiel." />
+      <position ligne="19" col="1" />
+      <ecrit texte="Verifier les informations aupres" />
+      <position ligne="20" col="1" />
+      <ecrit texte="de la mairie." />
+      <position ligne="23" col="1" />
+      <couleur texte="jaune" />
+      <ecrit texte="SOMMAIRE : retour accueil" />
+    </ecran>
+    <entree>
+      <zonesaisie ligne="24" col="1" longueur="1" curseur="invisible" />
+      <validation touche="sommaire" />
+      <validation touche="retour" />
+      <validation touche="repetition" />
+    </entree>
+    <action>
+      <saisie touche="sommaire" suivant="accueil" />
+      <saisie touche="retour" suivant="accueil" />
+      <saisie touche="repetition" suivant="mairie" />
+    </action>
+  </page>
+
+  <page nom="etatcivil">
+    <ecran>
+      <efface />
+      <position ligne="1" col="1" />
+      <couleur texte="jaune" fond="bleu" />
+      <ecrit texte="ETAT CIVIL / IDENTITE" />
+      <position ligne="4" col="1" />
+      <couleur texte="blanc" />
+      <ecrit texte="Carte d'identite et passeport :" />
+      <position ligne="5" col="1" />
+      <ecrit texte="sur rendez-vous au 04 95 30 79 70" />
+      <position ligne="8" col="1" />
+      <ecrit texte="Actes de naissance, mariage," />
+      <position ligne="9" col="1" />
+      <ecrit texte="deces et livret de famille." />
+      <position ligne="12" col="1" />
+      <couleur texte="cyan" />
+      <ecrit texte="Pre-demande en ligne :" />
+      <position ligne="13" col="1" />
+      <couleur texte="blanc" />
+      <ecrit texte="ants.gouv.fr" />
+      <position ligne="16" col="1" />
+      <ecrit texte="Details sur le site officiel." />
+      <position ligne="23" col="1" />
+      <couleur texte="jaune" />
+      <ecrit texte="SOMMAIRE : retour accueil" />
+    </ecran>
+    <entree>
+      <zonesaisie ligne="24" col="1" longueur="1" curseur="invisible" />
+      <validation touche="sommaire" />
+      <validation touche="retour" />
+      <validation touche="repetition" />
+    </entree>
+    <action>
+      <saisie touche="sommaire" suivant="accueil" />
+      <saisie touche="retour" suivant="accueil" />
+      <saisie touche="repetition" suivant="etatcivil" />
+    </action>
+  </page>
+
+  <page nom="ecoles">
+    <ecran>
+      <efface />
+      <position ligne="1" col="1" />
+      <couleur texte="jaune" fond="bleu" />
+      <ecrit texte="ECOLES ET JEUNESSE" />
+      <position ligne="4" col="1" />
+      <couleur texte="blanc" />
+      <ecrit texte="Groupes scolaires :" />
+      <position ligne="6" col="1" />
+      <ecrit texte="U Rustincu" />
+      <position ligne="7" col="1" />
+      <ecrit texte="U Principellu" />
+      <position ligne="10" col="1" />
+      <ecrit texte="Restauration scolaire" />
+      <position ligne="11" col="1" />
+      <ecrit texte="et accueil petite enfance." />
+      <position ligne="14" col="1" />
+      <couleur texte="cyan" />
+      <ecrit texte="Renseignements mairie :" />
+      <position ligne="15" col="1" />
+      <couleur texte="blanc" />
+      <ecrit texte="04 95 30 79 70" />
+      <position ligne="18" col="1" />
+      <ecrit texte="Inscription et horaires a verifier" />
+      <position ligne="19" col="1" />
+      <ecrit texte="sur le site officiel." />
+      <position ligne="23" col="1" />
+      <couleur texte="jaune" />
+      <ecrit texte="SOMMAIRE : retour accueil" />
+    </ecran>
+    <entree>
+      <zonesaisie ligne="24" col="1" longueur="1" curseur="invisible" />
+      <validation touche="sommaire" />
+      <validation touche="retour" />
+      <validation touche="repetition" />
+    </entree>
+    <action>
+      <saisie touche="sommaire" suivant="accueil" />
+      <saisie touche="retour" suivant="accueil" />
+      <saisie touche="repetition" suivant="ecoles" />
+    </action>
+  </page>
+
+  <page nom="urbanisme">
+    <ecran>
+      <efface />
+      <position ligne="1" col="1" />
+      <couleur texte="jaune" fond="bleu" />
+      <ecrit texte="URBANISME" />
+      <position ligne="4" col="1" />
+      <couleur texte="blanc" />
+      <ecrit texte="Plan local d'urbanisme (PLU)" />
+      <position ligne="6" col="1" />
+      <ecrit texte="Reglementation et autorisations" />
+      <position ligne="8" col="1" />
+      <ecrit texte="Cadastre et documents" />
+      <position ligne="9" col="1" />
+      <ecrit texte="d'urbanisme disponibles en ligne." />
+      <position ligne="12" col="1" />
+      <couleur texte="cyan" />
+      <ecrit texte="Contact mairie :" />
+      <position ligne="13" col="1" />
+      <couleur texte="blanc" />
+      <ecrit texte="04 95 30 79 70" />
+      <position ligne="16" col="1" />
+      <couleur texte="rouge" />
+      <ecrit texte="Le service urbanisme peut avoir" />
+      <position ligne="17" col="1" />
+      <ecrit texte="des horaires specifiques." />
+      <position ligne="23" col="1" />
+      <couleur texte="jaune" />
+      <ecrit texte="SOMMAIRE : retour accueil" />
+    </ecran>
+    <entree>
+      <zonesaisie ligne="24" col="1" longueur="1" curseur="invisible" />
+      <validation touche="sommaire" />
+      <validation touche="retour" />
+      <validation touche="repetition" />
+    </entree>
+    <action>
+      <saisie touche="sommaire" suivant="accueil" />
+      <saisie touche="retour" suivant="accueil" />
+      <saisie touche="repetition" suivant="urbanisme" />
+    </action>
+  </page>
+
+  <page nom="municipale">
+    <ecran>
+      <efface />
+      <position ligne="1" col="1" />
+      <couleur texte="jaune" fond="bleu" />
+      <ecrit texte="VIE MUNICIPALE" />
+      <position ligne="4" col="1" />
+      <couleur texte="blanc" />
+      <ecrit texte="Maire et elus" />
+      <position ligne="6" col="1" />
+      <ecrit texte="Conseil municipal" />
+      <position ligne="8" col="1" />
+      <ecrit texte="Elections" />
+      <position ligne="10" col="1" />
+      <ecrit texte="Marches publics" />
+      <position ligne="12" col="1" />
+      <ecrit texte="Deliberations et informations" />
+      <position ligne="13" col="1" />
+      <ecrit texte="municipales sur le site officiel." />
+      <position ligne="23" col="1" />
+      <couleur texte="jaune" />
+      <ecrit texte="SOMMAIRE : retour accueil" />
+    </ecran>
+    <entree>
+      <zonesaisie ligne="24" col="1" longueur="1" curseur="invisible" />
+      <validation touche="sommaire" />
+      <validation touche="retour" />
+      <validation touche="repetition" />
+    </entree>
+    <action>
+      <saisie touche="sommaire" suivant="accueil" />
+      <saisie touche="retour" suivant="accueil" />
+      <saisie touche="repetition" suivant="municipale" />
+    </action>
+  </page>
+
+  <page nom="actualites">
+    <ecran>
+      <efface />
+      <position ligne="1" col="1" />
+      <couleur texte="jaune" fond="bleu" />
+      <ecrit texte="ACTUALITES" />
+      <position ligne="4" col="1" />
+      <couleur texte="blanc" />
+      <ecrit texte="Informations et annonces" />
+      <position ligne="5" col="1" />
+      <ecrit texte="de la commune de Furiani." />
+      <position ligne="8" col="1" />
+      <ecrit texte="Les actualites ne sont pas" />
+      <position ligne="9" col="1" />
+      <ecrit texte="mises a jour automatiquement" />
+      <position ligne="10" col="1" />
+      <ecrit texte="dans cette version Minitel." />
+      <position ligne="13" col="1" />
+      <couleur texte="cyan" />
+      <ecrit texte="Consultez le site officiel :" />
+      <position ligne="14" col="1" />
+      <couleur texte="blanc" />
+      <ecrit texte="mairie-furiani.corsica" />
+      <position ligne="23" col="1" />
+      <couleur texte="jaune" />
+      <ecrit texte="SOMMAIRE : retour accueil" />
+    </ecran>
+    <entree>
+      <zonesaisie ligne="24" col="1" longueur="1" curseur="invisible" />
+      <validation touche="sommaire" />
+      <validation touche="retour" />
+      <validation touche="repetition" />
+    </entree>
+    <action>
+      <saisie touche="sommaire" suivant="accueil" />
+      <saisie touche="retour" suivant="accueil" />
+      <saisie touche="repetition" suivant="actualites" />
+    </action>
+  </page>
+
+  <page nom="contact">
+    <ecran>
+      <efface />
+      <position ligne="1" col="1" />
+      <couleur texte="jaune" fond="bleu" />
+      <ecrit texte="CONTACT ET HORAIRES" />
+      <position ligne="4" col="1" />
+      <couleur texte="blanc" />
+      <ecrit texte="Telephone : 04 95 30 79 70" />
+      <position ligne="7" col="1" />
+      <ecrit texte="Centre administratif" />
+      <position ligne="8" col="1" />
+      <ecrit texte="Via di u cinque di maghju" />
+      <position ligne="9" col="1" />
+      <ecrit texte="20600 Furiani" />
+      <position ligne="12" col="1" />
+      <couleur texte="cyan" />
+      <ecrit texte="Horaires habituels publies :" />
+      <position ligne="14" col="1" />
+      <couleur texte="blanc" />
+      <ecrit texte="Lun-ven : 8h-12h / 14h-17h" />
+      <position ligne="17" col="1" />
+      <couleur texte="cyan" />
+      <ecrit texte="Horaires d'ete publies :" />
+      <position ligne="19" col="1" />
+      <couleur texte="blanc" />
+      <ecrit texte="Lun-ven : 8h-15h" />
+      <position ligne="21" col="1" />
+      <couleur texte="rouge" />
+      <ecrit texte="Verifier avant de vous deplacer." />
+      <position ligne="23" col="1" />
+      <couleur texte="jaune" />
+      <ecrit texte="SOMMAIRE : retour accueil" />
+    </ecran>
+    <entree>
+      <zonesaisie ligne="24" col="1" longueur="1" curseur="invisible" />
+      <validation touche="sommaire" />
+      <validation touche="retour" />
+      <validation touche="repetition" />
+    </entree>
+    <action>
+      <saisie touche="sommaire" suivant="accueil" />
+      <saisie touche="retour" suivant="accueil" />
+      <saisie touche="repetition" suivant="contact" />
+    </action>
+  </page>
+</service>
